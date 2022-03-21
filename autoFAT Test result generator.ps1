@@ -1,9 +1,8 @@
 
 if ($env:COMPUTERNAME = "SGSI11-59FKK13") {
     set-variable -name "path" -value "S:\RHID"
-        } else {
-        } (set-variable -name "path" -value "E:\RHID")
-        $sn = read-host "Enter Insutrment Serial Number, enter again to paste folder path"
+        } else {set-variable -name "path" -value "E:\RHID"}
+ $sn = read-host "Enter Insutrment Serial Number, enter again to paste folder path"
 
 if ($sn -eq '') {
   ($sn = read-host "Enter Folder Path") -and (set-variable -name "serverdir" -value "$sn")
